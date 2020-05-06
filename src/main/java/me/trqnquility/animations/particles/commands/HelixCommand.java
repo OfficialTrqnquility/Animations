@@ -22,9 +22,14 @@ public class HelixCommand implements CommandExecutor {
         Player player = (Player) sender;
 
         Location loc = player.getLocation();
-        int radius = 1;
+        int radius = 2;
+        for(double y = 0; y <= 50; y+=0.05) {
+            double x = radius * Math.cos(y);
+            double z = radius * Math.sin(y);
+            PacketPlayOutWorldParticles packet = new PacketPlayOutWorldParticles(EnumParticle.FIREWORKS_SPARK, false, (float) (loc.getX() + x), (float) (loc.getY() + y), (float) (loc.getZ() + z), 0, 0, 0, 0, 1);
+                ((CraftPlayer)player).getHandle().playerConnection.sendPacket(packet);
 
-        Bukkit.getScheduler().runTaskTimerAsynchronously();
+        }
         return false;
     }
 }
