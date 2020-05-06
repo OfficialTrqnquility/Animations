@@ -1,0 +1,9 @@
+name: Animations
+version: @version@
+main: me.trqnquility.animations.Animations
+api-version: 1.13
+prefix: Animations
+authors: [Trqnquility]
+description: Test Animations
+commands:
+  helix:
