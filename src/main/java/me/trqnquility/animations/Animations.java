@@ -1,7 +1,11 @@
 package me.trqnquility.animations;
 
-import me.trqnquility.animations.particles.commands.ConeCommand;
+import me.trqnquility.animations.armorstands.commands.RiseCommand;
+import me.trqnquility.animations.armorstands.commands.SpinCommand;
+import me.trqnquility.animations.particles.commands.CircleCommand;
 import me.trqnquility.animations.particles.commands.HelixCommand;
+import me.trqnquility.animations.particles.commands.LineCommand;
+import me.trqnquility.animations.particles.commands.TunnelCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Animations extends JavaPlugin {
@@ -22,7 +26,13 @@ public final class Animations extends JavaPlugin {
 
     private final void registerCommands() {
         getCommand("helix").setExecutor(new HelixCommand());
-        getCommand("cone").setExecutor(new ConeCommand());
+        getCommand("line").setExecutor(new LineCommand());
+        getCommand("circle").setExecutor(new CircleCommand());
+        getCommand("tunnel").setExecutor(new TunnelCommand());
+
+        getCommand("rise").setExecutor(new RiseCommand());
+        getCommand("spin").setExecutor(new SpinCommand());
+        getCommand("packet").setExecutor(new PacketCommand());
     }
 
     public static Animations getInstance() {

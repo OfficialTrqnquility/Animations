@@ -7,3 +7,9 @@ authors: [Trqnquility]
 description: Test Animations
 commands:
   helix:
+  line:
+  circle:
+  tunnel:
+  rise:
+  spin:
+  packet:
